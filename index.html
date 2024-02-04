@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Josefin+Sans&family=Urbanist&display=swap');
+    </style>
+</head>
+<body>
+    <label class="models">
+        confirme a senha:
+        <input type="password" name="password" data-rules="confirm">
+    </label>
+    <div class="screen">
+        
+        <div class="leftside">
+            <img src="img/Forms-cuate.png" alt="">
+        </div>
+        <div class="rightside">
+            <h1>Crie sua conta</h1>
+            <form method="POST" class="validatorForm">
+                <label>
+                    nome:
+                    <input class="formName" type="text" name="name" data-rules="required|min=5">
+                </label>
+                <label>
+                    e-mail:
+                    <input class="formEmail" type="text" name="email" data-rules="required|email">
+                </label>
+                <label id="labelPassword">
+                    senha:
+                    <input class="formPassword" type="password" name="password" data-rules="required|min=8|password">
+                </label>
+                <label>
+                    <input type="submit" value="Cadastrar">
+                </label>
+            </form>
+            <div>
+                <p>ja tem conta? <a href="">faça login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
