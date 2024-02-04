@@ -1,5 +1,3 @@
-let count = 0
-
 const inputElement = document.querySelector('.formPassword');
 const lastLabel = document.querySelector('#labelPassword');
 
@@ -25,7 +23,6 @@ let validator = {
         e.preventDefault();
         let send = true;
         let inputList = form.querySelectorAll('input');
-        count = 0
 
         validator.clearError();
 
@@ -85,7 +82,6 @@ let validator = {
         return true
     },
     showError: (input, error) => {
-        // count++
         input.style.borderColor = '#eb220f';
 
         let divErrorNew = document.createElement('div');
@@ -139,7 +135,6 @@ let validator = {
     clearPassword: (element) => {
         element.style = '';
 
-        // let errorEl = document.querySelector('#labelPassword');
         let divErrorEl = lastLabel.querySelector('div p')
         console.log(divErrorEl)
         if (divErrorEl !== null) {
@@ -153,11 +148,7 @@ function createConfirm(element) {
     let labelPassword = document.querySelector('.models').cloneNode(true)
     labelPassword.querySelector('input').classList.add('confirmPassword')
     lastLabel.insertAdjacentElement('afterend', labelPassword);
-
-    
-
 }
-
 
 let form = document.querySelector('.validatorForm');
 form.addEventListener('submit', validator.handleSubmit)
